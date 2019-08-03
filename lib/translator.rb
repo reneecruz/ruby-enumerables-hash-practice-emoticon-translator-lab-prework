@@ -1,8 +1,8 @@
-require "yaml"
-
-def load_library(file)
-  YAML.load_file(file)
-   hash = {"get_emoticon": {}, "get_meaning": {}}
+def load_library(file_path)
+  require "yaml"
+  hash = YAML.load_file(file_path)
+  emoticon_hash = {get_emoticon: {}, get_meaning: {}}
+  emoticon_hash
 end
 
 def get_japanese_emoticon
