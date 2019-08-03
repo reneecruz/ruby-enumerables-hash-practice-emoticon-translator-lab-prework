@@ -2,6 +2,9 @@ def load_library(file_path)
   require "yaml"
   hash = YAML.load_file(file_path)
   emoticon_hash = {get_emoticon: {}, get_meaning: {}}
+  hash.keys do |key| 
+    emoticon_hash[:get_emoticon][:key]
+  end
   emoticon_hash
 end
 
