@@ -13,14 +13,13 @@ def load_library(file_path)
 end
 
 def get_japanese_emoticon(file_path, emoticon)
-  load_library(file_path).each do |key, value|
+ load_library(file_path).each do |key, value|
     value.each do |data|
       if data[0] == emoticon
         return data[1]
       end
     end
   end
-       
 end
 
 def get_english_meaning(file_path, emoticon)
@@ -30,8 +29,6 @@ def get_english_meaning(file_path, emoticon)
     if japanese_emo == emoticon
       return eng_meaning
     end
-    #binding.pry 
   end
-
-
+ 
 end
