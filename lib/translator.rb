@@ -17,7 +17,8 @@ def get_japanese_emoticon(file_path, emoticon)
     value.each do |data|
       if data[0] == emoticon
         return data[1]
-          #binding.pry
+      else
+        return "Sorry, that emoticon was not found."
       end
     end
   end
