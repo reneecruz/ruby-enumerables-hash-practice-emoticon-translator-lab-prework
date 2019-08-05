@@ -1,5 +1,5 @@
- require  "pry"
- require "yaml"
+require  "pry"
+require "yaml"
 
 def load_library(file_path)
   yaml_hash = YAML.load_file(file_path)
@@ -12,6 +12,7 @@ def load_library(file_path)
   emoticon_hash
 end
 
+
 def get_japanese_emoticon(file_path, emoticon)
  load_library(file_path).each do |key, value|
     value.each do |data|
@@ -19,8 +20,10 @@ def get_japanese_emoticon(file_path, emoticon)
         return data[1]
       end
     end
+    return "Sorry, that emoticon was not found"
   end
 end
+
 
 def get_english_meaning(file_path, emoticon)
   emoticon_hash = load_library(file_path)
@@ -30,5 +33,5 @@ def get_english_meaning(file_path, emoticon)
       return eng_meaning
     end
   end
- 
+  return "Sorry, that emoticon was not found"
 end
