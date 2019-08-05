@@ -1,10 +1,5 @@
-<<<<<<< HEAD
- require  "pry"
- require "yaml"
-=======
- require "yaml"
- require "pry"
->>>>>>> ef50fff305734f6332c7d753792b84c5228b6080
+require  "pry"
+require "yaml"
 
 def load_library(file_path)
   yaml_hash = YAML.load_file(file_path)
@@ -12,12 +7,8 @@ def load_library(file_path)
   
   yaml_hash.each do |key, value| 
   emoticon_hash[:get_emoticon][value[0]] = value[1]
-<<<<<<< HEAD
   emoticon_hash[:get_meaning][value[1]] = key
-=======
-        #binding.pry
 
->>>>>>> ef50fff305734f6332c7d753792b84c5228b6080
   end
   emoticon_hash
 end
